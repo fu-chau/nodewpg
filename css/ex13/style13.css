@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, Helvetica, sans-serif
+}
+article {
+    border: solid gray 1px ;
+}
+article.hidden {
+    background: #ddd;
+}
+article.remove {
+    background: #999;
+}
+article.hidden > h1 {
+    visibility: hidden;
+}
+article.remove > h1 {
+    display: none
+}

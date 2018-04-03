@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(pattern.jpg) repeat;
+    margin: 20px 0px 20px 0px;
+    padding: 0px;
+}
+.main {
+    background: ghostwhite;
+    width: 900px;
+    margin: 0px 0px ;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 6px -6px #777;
+}
