@@ -6,4 +6,4 @@ This project it's to learn HTML, CSS, JS, Node.js and MongoDB
 
 2. [CSS  exercises](./css)
 
-3. [JavaScript exercises](./java_script)
+3. [JAVA SCRIPT exercises](./java_script)
