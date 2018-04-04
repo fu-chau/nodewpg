@@ -60,6 +60,7 @@ footer .love{
 }
 @media only screen and (max-width: 768px) {
     /* Smaller screen code here */
+}    
     .container {
         width: 100%;
     }
@@ -84,4 +85,3 @@ footer .love{
     .main p {
         text-align: justify;
     }
-  }
