@@ -8,4 +8,6 @@ This project it's to learn HTML, CSS, JS, Node.js and MongoDB
 
 3. [JAVA SCRIPT exercises](./java_script)
 
+3. [BROWSER API exercises](./browser_api)
+
 ![Alt Text](https://media.giphy.com/media/QHE5gWI0QjqF2/giphy.gif)
