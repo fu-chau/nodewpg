@@ -1,0 +1,57 @@
+<!-- Select the first list item element and add the orange class
+Using the selected element select the following element using nextElementSibling and add the orange class
+Keep doing this until there's no more siblings
+At the end all elements must have the orange class
+Once you acomplish this task:
+Now we need to go back using previousElementSibling
+Add red class to Item 3
+Add green class to Item 1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Elements</title>
+  <style>
+    .red {
+      color: red;
+    }
+    
+    .green {
+      color: green;
+    }
+    
+    .orange {
+      color: orange;
+    }
+  </style>
+  <script>
+    window.onload = function() {
+        let firstItem = document.querySelector('li');
+        firstItem.setAttribute('class','orange');
+        let secoundItem = firstItem.nextElementSibling;
+        secoundItem.setAttribute('class','orange');
+        let thirdItem = secoundItem.nextElementSibling;
+        thirdItem.setAttribute('class','orange');
+        let fourthItem = thirdItem.nextElementSibling;
+        fourthItem.setAttribute('class','orange');
+        let fifthItem = fourthItem.nextElementSibling;
+        fifthItem.setAttribute('class','orange');
+
+        setTimeout(function(){
+            let green = secoundItem.previousElementSibling;
+            green.setAttribute('class','green');                    
+            let red = fourthItem.previousElementSibling;
+            red.setAttribute('class','red');
+        },4000)
+    }
+  </script>
+</head>
+<body>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
+</body>
+</html>

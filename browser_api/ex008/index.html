@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        let number = 0;
+        let counter = 0;
+        let userNumber = 0;
+       
+        alert(`This program adds all the numbers you input`)
+        
+        while (confirm('Do you want to add a number ?')) {
+            userNumber = +prompt ('add a number')
+            number = number + userNumber
+            console.log (number);
+            counter++;
+            console.log (counter);
+            console.log (`avrage = ${number / counter}`);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

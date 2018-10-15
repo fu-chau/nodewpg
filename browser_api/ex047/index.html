@@ -1,0 +1,56 @@
+<!-- Create a basic HTML document
+Create a script tag on the document head element
+Select the form element using any of the JavaScript selectors
+Add a form submit event handler and prevent the default behaviour
+Show the following message when the user submits the form:
+Show the following message if the user doesn't select any superheroes:
+Please at least select a superheroe
+Show the following message if the user only selects one superheroe
+The best superheroe is: %selectedSuperhero%
+Show the following message if the user selects many superheroes
+The best superheores are: %listOfSuperheroesNames% -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form Checkbox</title>
+  <script>
+    window.onload = function() {
+        const form = document.querySelector('form')
+
+        form.onsubmit = (function(event){
+            event.preventDefault();
+            const heroesSelection = document.querySelectorAll('input:checked');
+            const heroes = []
+        
+            heroesSelection.forEach(function(hero) {
+                heroes.push(hero.value);
+            })
+            
+            if (heroes.length === 0) {
+                alert('Please at least select a superheroe');
+            } else if (heroes.length === 1) {
+                alert(`The best superheroe is: ${heroes[0]}`);
+            } else {
+                alert(`The best superheores are: ${heroes.join(', ')}`);
+            }
+        })
+    }
+   </script>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="checkbox" name="superheroe" value="Wolverine"> Wolverine <br>
+    <input type="checkbox" name="superheroe" value="The Invisible Woman"> The Invisible Woman<br>
+    <input type="checkbox" name="superheroe" value="Iron Man"> Iron Man<br>
+    <input type="checkbox" name="superheroe" value="Superman"> Superman<br>
+    <input type="checkbox" name="superheroe" value=""> Daredevil<br>
+    <input type="checkbox" name="superheroe" value="The Flash"> The Flash<br>
+    <input type="checkbox" name="superheroe" value="Captain America"> Captain America<br>
+    <input type="checkbox" name="superheroe" value="Wonder Woman"> Wonder Woman<br>
+    <input type="checkbox" name="superheroe" value="Spider-Man"> Spider-Man<br>
+    <input type="checkbox" name="superheroe" value="Batman"> Batman<br>
+    <input type="submit" name="submit" value="Submit" />
+  </form>
+</body>
+</html>

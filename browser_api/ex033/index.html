@@ -1,0 +1,28 @@
+<!-- Select the firstButton id element using querySelector method
+When the user clicks this button will see an alert message with the following message:
+You clicked an event listened element
+Use addEventListener to add this functionality
+Add other event listener to this button reading the doc and using your imagination! -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+        window.onload = function() {
+        const button = document.querySelector('button');
+        const button2 = document.getElementById('secondButton');
+        button.addEventListener('click',function(){
+            alert('You clicked an event listened element');
+        })
+        button2.addEventListener('dblclick',function(){
+            window.location.replace(prompt('put an url'));
+        })
+        }
+    </script>
+  </head>
+  <body>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>

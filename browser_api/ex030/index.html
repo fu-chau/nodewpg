@@ -1,0 +1,32 @@
+<!-- Select the ul element
+Remove each list item starting from the last item until the first one
+(first remove milk, then lettuce and so on..)
+Use a iterator to accomplish this task -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Products</title>
+    <script>
+      window.onload = function() {
+        let ul = document.querySelector('ul');
+        const amount = ul.children.length;
+        
+        for (let counter = (amount-1); counter >= 0; counter--) {
+          let item = ul.children.item(counter);
+          ul.removeChild(item);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li>Bannana</li>
+      <li>Apple</li>
+      <li>Peach</li>
+      <li>Eggs</li>
+      <li>Tomatto</li>
+      <li>Lettuce</li>
+      <li>Milk</li>
+    </ul>
+  </body>
+</html>

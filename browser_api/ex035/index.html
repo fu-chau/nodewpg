@@ -1,0 +1,39 @@
+<!-- Copy and paste exercise 34 code
+Add a link element like the one in html example
+Select the link element using querySelector method
+Add the link element an click event handler using addEventListener
+When the user clicks on the link we need to prevent the default behaviour
+Show the following message using alert
+This link doesn't send us to a differen page as we're preventing the default behaviour -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+        window.onload = function() {
+        const button = document.querySelector('button');
+        const button2 = document.getElementById('secondButton');
+        const greeting = function (){
+            alert('using firstButton event listener');
+        }
+        button.addEventListener('click',greeting)
+        
+        const remove = function(){
+            button.removeEventListener('click',greeting);
+        }
+        button2.addEventListener('click',remove)
+
+        const link = document.querySelector('a');
+        link.addEventListener('click',function(event){
+            event.preventDefault()
+            alert("This link doesn't send us to a differen page as we're preventing the default behaviour");
+        })
+        }
+    </script>
+  </head>
+  <body>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>

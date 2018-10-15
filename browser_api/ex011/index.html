@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            const userName = prompt('enter username');
+            const password = prompt('enter password');
+            const logg = function () {
+                const exp = window.confirm('Do you still want to be logged?');
+                if (exp === true) {
+                alert(`${userName} your session has been restored`);           
+                } else {
+                alert(`${userName} your session has expaired`);
+                }
+            }
+            alert (`hello ${userName}`);
+
+            setTimeout(logg, 10000);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

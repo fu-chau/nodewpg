@@ -1,0 +1,40 @@
+<!-- Create the following folder/file structure:
+/ex_13
+  |- - index.html
+index.html
+Create a basic HTML document
+Create a script tag on the document head element
+Ask the user to input the number of seconds that he would like to stay in our site
+Show how many seconds left he has using console.log()
+Once the session is over show the following message:
+Your session has expired, come again soon! -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            let userTime = (+prompt('how long would you like to stay here?'));
+            let counter = userTime
+            let timer = function () {
+                console.log (counter);
+                counter--;
+                if (counter === 0) {
+                    alert ('Your session has expired, come again soon!');
+                    clearInterval (time);
+                }
+
+            }
+           let time = setInterval(timer,1000);
+            
+
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+    <script>
+        window.onload = function() {
+            let names = [];
+            const body = document.querySelector('body');
+            while (confirm('Do you want to add a name ?')) {
+            let userName = prompt ('add a name');
+            names.push(userName);
+            }
+            console.log(names);
+            const ul = document.createElement('ul');
+            names.forEach(function(name){
+                let element = document.createElement('li');
+                if (names.length % 2 == 0) {
+                    element.style.color = '#ddd'
+                }else {
+                    element.style.color = '#eee'
+                }
+                element.innerText = `${name}`;
+                ul.appendChild(element);
+            })
+            body.appendChild(ul);
+        }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

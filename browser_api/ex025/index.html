@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+    <script>
+        window.onload = function () {
+            let elementBody = document.querySelector('body');
+            let h1 = document.createElement('h1');
+            let paragraph = document.createElement('p');
+
+            h1.innerText = 'Create Dynamic content!!!';
+            paragraph.innerText = 'This elements were created using JavaScript';
+
+            elementBody.appendChild(h1);
+            elementBody.appendChild(paragraph);
+
+        }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

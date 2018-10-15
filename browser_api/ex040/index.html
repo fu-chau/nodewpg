@@ -1,0 +1,56 @@
+<!-- Create a basic HTML document
+Create a script tag on the document head element
+Select the link element and add a onmouseover event handler
+Change the link style (background color) when the user hovers the link element using JavaScript
+The background color must be:
+First time: red
+Second time: blue
+Third time: green
+Fourth time: gray
+After four times: white
+Add the link element a onmouseout event handler and show the following alert:
+The link background color is: %backgroundColor% -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+        window.onload = function() {
+            const link = document.querySelector('a');
+            let counter = 0;
+            console.log(counter);
+            const rainbow = function(){
+                counter++;
+                if (counter == 1){
+                    link.style.background = 'red'
+                } else if (counter == 2){
+                    link.style.background = 'blue'
+                } else if (counter == 3){
+                    link.style.background = 'green'
+                } else if (counter == 4){
+                    link.style.background = 'grey'
+                }   
+            }
+            const warning = function () {
+                if (counter == 1){
+                    alert (`The link background color is: red`)
+                } else if (counter == 2){
+                    alert (`The link background color is: blue`)
+                } else if (counter == 3){
+                    alert (`The link background color is: green`)
+                } else if (counter == 4){
+                    alert (`The link background color is: grey`)
+                } 
+            }
+            link.onmouseover = rainbow;
+            link.onmouseout = warning;     
+        }
+    </script>
+  </head>
+  <body>
+    <div></div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>

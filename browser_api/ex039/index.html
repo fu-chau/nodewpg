@@ -1,0 +1,31 @@
+<!-- Create a basic HTML document
+Create a script tag on the document head element
+Select the firstButton id element and add a ondblclick event handler
+Define a counter numberic variable and set the value to 0
+Increment the counter variable When the user double clicks the firstButton element
+Show the counter value using the div element -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+        window.onload = function() {
+            const button = document.getElementById('firstButton')
+            const div = document.querySelector('div');
+            let counter = 0;
+            const clicks = function (){
+                div.innerText = '';
+                counter++;
+                div.innerText += counter;
+            }
+            button.addEventListener('dblclick',clicks);           
+        }
+    </script>
+  </head>
+  <body>
+    <div></div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>

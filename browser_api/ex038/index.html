@@ -1,0 +1,43 @@
+<!-- Create a basic HTML document
+Create a script tag on the document head element
+Select the div element using querySelector
+Refactor the body keypress event handler to show the pressed key and code as div content instead of using the console
+This means that we'll have to remove the console.log call
+Show the text inside the div
+Once you have this feature working add the following styles to the div:
+Font size: 20px
+Font Color: red
+Font Family: Arial
+Bottom padding: 20px -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+        window.onload = function() {
+            const html = document.querySelector('html');
+            const div = document.querySelector('div');
+
+            html.addEventListener('keypress', function(event) {
+            const character = String.fromCharCode(event.charCode);
+            console.log(`You pressed the: ${event.charCode}, key with the: ${character}`);
+            div.innerText += character;
+            });
+        }
+    </script>
+    <style>
+        div {
+            font-size: 20px;
+            color: red;
+            font-Family: Arial;
+            padding-bottom: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!-- Create a basic HTML document
+Create a script tag on the document head element
+Select the body element and add the keypress event handler
+When the user press a key we'll show the following message on the console
+You pressed the %pressedKey% key with the %charCode% code
+Use event.charCode & String.fromCharCode() to get the key and code -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+        <script>
+        window.onload = function() {
+        const button = document.querySelector('button');
+        const button2 = document.getElementById('secondButton');
+        const greeting = function (){
+            alert('using firstButton event listener');
+        }
+        button.addEventListener('click',greeting)
+        
+        const remove = function(){
+            button.removeEventListener('click',greeting);
+        }
+        button2.addEventListener('click',remove)
+// -------------------------------------------------------------------------
+        const link = document.querySelector('a');
+
+        link.addEventListener('click',function(event){
+            event.preventDefault()
+            alert("This link doesn't send us to a differen page as we're preventing the default behaviour");
+        })
+// ------------------------------------------------------------------------- 
+        const html = document.querySelector('html');
+        html.addEventListener('click', function(evt) {
+            alert(`x: ${evt.clientX}, y: ${evt.clientY}`); // https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientX
+        });                                                // i use this web site to solve this
+// -------------------------------------------------------------------------
+        html.addEventListener('keypress', function(event) {
+        const character = String.fromCharCode(event.charCode);
+        console.log(`You pressed the: ${event.charCode}, key with the: ${character}`);
+        });
+        } 
+        </script>
+  </head>
+  <body>
+    <div></div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!-- Create a basic HTML document
+Create a script tag on the document head element
+Select the form element using any of the JavaScript selectors
+Crete a variable for each form property
+Example define a action variable and assign the form action property
+Show each form property value as div content -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form Properties</title>
+    <script>
+        window.onload = function() {
+            const div = document.querySelector('div');
+            const form = document.querySelector('form')
+            const action = form.action
+            const method = form.method
+            const encypte = form.enctype     
+            const name = form.name
+            
+            div.innerText = `action = ${action}\n method = ${method}\n encypte = ${encypte}\n name = ${name}`
+        }
+    </script>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" />
+    <input type="password" id="pass" name="pass" />
+    <input type="submit" name="submit" value="Send" />
+  </form>
+  <div></div>
+</body>
+</html>
